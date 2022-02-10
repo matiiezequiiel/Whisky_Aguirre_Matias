@@ -24,7 +24,8 @@ html {
   #cabecera #menu {
     background-color: transparent; }
     #cabecera #menu img {
-      border-radius: 50%; }
+      border-radius: 50%;
+      border: 3px solid #baab8f; }
     #cabecera #menu .navbar-toggler {
       background-color: #baab8f; }
     #cabecera #menu p {
