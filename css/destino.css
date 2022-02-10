@@ -23,6 +23,8 @@ html {
   width: 100vw; }
   #cabecera #menu {
     background-color: transparent; }
+    #cabecera #menu img {
+      border-radius: 50%; }
     #cabecera #menu .navbar-toggler {
       background-color: #baab8f; }
     #cabecera #menu p {

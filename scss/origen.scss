@@ -36,6 +36,9 @@ html {
   width: 100vw;
   #menu {
     background-color: transparent;
+    img{
+      border-radius: 50%;
+    }
     .navbar-toggler {
       background-color: #baab8f;
     }
