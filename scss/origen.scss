@@ -4,6 +4,7 @@ IMPORTACIONES
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 /*****************************************************************************************************************
 ESTILOS GENERALES
@@ -162,8 +163,41 @@ main{
     
   }
   
-  
 }
+
+#pie{
+  background-color: #0D0D0D;
+  height: auto;
+  border-radius: 1%;
+
+  h2,p{
+    color: map-get($colores, color-cabecera);
+    // color: white !important;
+  }
+  .cont-enlaces {
+    a {
+      position: relative;
+      color: white !important;
+      font-size: x-large;
+      }
+    }
+}
+
+  
+  // #pie2{
+  //   color: black;
+  //   background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) );
+  // }
+  
+  
+  // background: linear-gradient( rgba(186, 171, 143, 0.8), rgba(186, 171, 143, 0.8) );
+    // background-color: map-get($colores, color-cabecera) !important;
+    // a {
+    //   font-size: large;
+    //   font-weight: bold;
+    //   color: #3f3f3f;
+    // }
+
 
 
   

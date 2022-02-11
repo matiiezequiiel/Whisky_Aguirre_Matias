@@ -4,6 +4,7 @@ IMPORTACIONES
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 /*****************************************************************************************************************
 ESTILOS GENERALES
 ******************************************************************************************************************/
@@ -112,6 +113,17 @@ main .miBoton {
     color: black; }
   main .miBoton:active:before {
     background: #baab8f; }
+
+#pie {
+  background-color: #0D0D0D;
+  height: auto;
+  border-radius: 1%; }
+  #pie h2, #pie p {
+    color: #baab8f; }
+  #pie .cont-enlaces a {
+    position: relative;
+    color: white !important;
+    font-size: x-large; }
 
 /*****************************************************************************************************************
 ESTILOS MOBILE
