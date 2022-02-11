@@ -80,7 +80,7 @@ main .cont-img {
       width: 80%; } }
   main .cont-img img {
     border-radius: 40px;
-    box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32); }
+    box-shadow: 0px 0px 45px 5px #baab8f; }
 
 main .miBoton {
   width: 140px;
