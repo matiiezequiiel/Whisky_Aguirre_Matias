@@ -3,6 +3,7 @@ IMPORTACIONES
 ******************************************************************************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
 /*****************************************************************************************************************
 ESTILOS GENERALES
@@ -11,48 +12,53 @@ ESTILOS GENERALES
 // Mapas
 
 $colores: (
-  c-uno: #f0e9d2,
-  c-dos: #e6ddc4,
-  c-tres: #533535,
+  color-cabecera: #baab8f,
+  color-enlaces: #533535,
+  color-fondo: black
+);
+
+$tamaños-media:( 
+    t-sm: 576px,
+    t-md: 768px,
+    t-lg: 992px, 
+    t-xl: 1200px
 );
 
 html {
   scroll-behavior: smooth;
   body {
     overflow-x: hidden;
-    background-color: black;
+    background-color: map-get($colores, color-fondo);
   }
 }
 
-
 #cabecera {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
   background: url(../assets/Whisky_fondo.jpg) no-repeat center;
   background-size: cover;
   min-height: 100vh;
   width: 100vw;
   #menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
     background-color: transparent;
     img{
       border-radius: 50%;
-      border: 5px double #baab8f;
-     
+      border: 5px double map-get($colores, color-cabecera);
     }
     .navbar-toggler {
-      background-color: #baab8f;
+      background-color: map-get($colores, color-cabecera);
     }
     p {
       font-family: "Great Vibes", cursive;
       text-align: center;
-      color: #baab8f !important;
+      color: map-get($colores, color-cabecera) !important;
     }
     .cont-enlaces {
       a {
         position: relative;
-        color: #baab8f !important;
+        color: map-get($colores, color-cabecera) !important;
         font-family: "El Messiri", sans-serif;
         letter-spacing: 0.065rem;
         font-size: x-large;
@@ -64,7 +70,7 @@ html {
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: map-get($colores, c-tres);
+          background-color: map-get($colores, color-enlaces);
           transform: scaleX(0);
           transform-origin: bottom right;
           transition: transform 600ms ease-out;
@@ -84,6 +90,85 @@ html {
   z-index: 2;
 }
 
+
+
+main{
+
+  h2{
+    font-family: "El Messiri", sans-serif;
+  }
+  p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .cont-text{
+    color: white;
+    width: 80%;
+    @media all and (max-width: map-get($tamaños-media, t-sm )) {
+        width: 90%;
+    }
+  }  
+
+  .cont-img{
+    width: 50%;
+    @media all and (max-width: map-get($tamaños-media,t-md )) {
+        width: 80%;
+    }
+    img{
+        border-radius: 40px;
+        box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);  
+    }
+  } 
+
+  .miBoton {
+    width: 140px;
+    height: 45px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: map-get($colores, color-cabecera);
+    font-family: "El Messiri", sans-serif;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: map-get($colores, color-cabecera);
+      z-index: -1;
+      transition: all 0.5s;
+    }
+    
+    &:hover::before {
+      width: 100%;
+    }
+    
+    &:hover {
+      color: black;
+    }
+    
+    &:active:before {
+      background: map-get($colores, color-cabecera);
+    }
+    
+  }
+  
+  
+}
+
+
+  
+
+ 
 /*****************************************************************************************************************
 ESTILOS MOBILE
 ******************************************************************************************************************/
@@ -122,7 +207,13 @@ ESTILOS TABLET
 /*****************************************************************************************************************
 ESTILOS DESKTOP
 ******************************************************************************************************************/
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1499px) {
+  #navbarSupportedContent {
+    margin-left: 35%;
+  }
+}
+
+@media (min-width: 1500px)  {
   #navbarSupportedContent {
     margin-left: 45%;
   }
