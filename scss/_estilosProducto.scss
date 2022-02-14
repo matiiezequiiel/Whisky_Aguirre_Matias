@@ -11,6 +11,7 @@ ESTILOS CARROUSEL
 ******************************************************************************************************************/
 .carousel {
   margin-bottom: 4rem;
+  width: 100vw;
   .carousel-caption {
     bottom: 3rem;
     z-index: 1;
@@ -94,7 +95,6 @@ ESTILOS MOBILE
 ******************************************************************************************************************/
 
 @media (max-width: 480px) {
-  /* Bump up size of carousel content */
   .carousel-caption p {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
@@ -103,6 +103,15 @@ ESTILOS MOBILE
 
   .featurette-heading {
     font-size: 50px;
+  }
+
+  .featurette-divider {
+    margin: 3rem 0;
+  }
+
+  .featurette img {
+    max-width: 100vw;
+
   }
 
   .carousel {
@@ -114,6 +123,8 @@ ESTILOS MOBILE
         font-size: 1rem !important;
       }
     }
+
+    
 }
   
 
@@ -126,4 +137,16 @@ ESTILOS TABLET
   .featurette-heading {
     margin-top: 7rem;
   }
+
+  .featurette-divider {
+    margin: 4rem 0;
+  }
+
+  .featurette img {
+    max-width: 100vw;
+
+  }
+
+ 
+  
 }
