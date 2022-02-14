@@ -86,7 +86,7 @@ ESTILOS MOBILE
 ******************************************************************************************************************/
 
 @media (max-width: 480px) {
-  #cabecera {
+  #cabecera,#cabecera-secundaria{
     background-position: 45%;
     #menu {
       background: #000000;  /* fallback for old browsers */
@@ -105,7 +105,7 @@ ESTILOS TABLET
 ******************************************************************************************************************/
 
 @media (min-width: 481px) and (max-width: 1023px) {
-  #cabecera {
+  #cabecera,#cabecera-secundaria {
     background-position: 40%;
     #menu {
       background: #000000;  /* fallback for old browsers */
