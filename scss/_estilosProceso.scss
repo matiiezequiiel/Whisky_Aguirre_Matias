@@ -1,0 +1,45 @@
+/*****************************************************************************************************************
+ESTILOS PAGINA PROCESO
+******************************************************************************************************************/
+/*****************************************************************************************************************
+IMPORTACIONES ESTILOS OTRAS PAGINAS
+******************************************************************************************************************/
+@import "_generales";
+
+/*****************************************************************************************************************
+ESTILOS 
+******************************************************************************************************************/
+
+.featurette-divider-proceso {
+
+    background: #F7F8F8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACBB78, #F7F8F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    height: 3px !important;
+    margin: 0px 5% 0px 5%;
+    border-radius: 300px/10px;
+
+}
+
+.featurette-heading-proceso {
+    color: black; /*if no support for background-clip*/
+    background: -webkit-linear-gradient(transparent, transparent),
+      -webkit-linear-gradient(top, rgba(213, 173, 109, 1) 0%, rgba(
+              213,
+              173,
+              109,
+              1
+            )
+            26%, rgba(226, 186, 120, 1) 35%, rgba(163, 126, 67, 1) 45%, rgba(
+              145,
+              112,
+              59,
+              1
+            )
+            61%, rgba(213, 173, 109, 1) 100%);
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-size: 3rem;
+  }
