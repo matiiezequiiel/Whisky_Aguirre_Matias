@@ -27,8 +27,8 @@
   </head>
   <body>
     <!-- INICIO CABECERA -->
-    <header id="cabecera">
-      <nav class="navbar navbar-expand-lg navbar-light" id="menu">
+    <header class="cabecera">
+      <nav class="navbar navbar-expand-lg navbar-light menu" >
         <div class="container-fluid">
           <a class="navbar-brand" href="./index.html">
             <img
@@ -36,10 +36,10 @@
               alt="logo"
               width="75"
               height="75"
-              class="d-inline align-text-center"
+              class="d-inline align-text-center logo"
               style="border-radius: 50%"
             />
-            <p class="d-inline fs-2 fw-bold pt-lg-3">Whisky</p>
+            <p class="marca d-inline fs-2 fw-bold pt-lg-3">Whisky</p>
           </a>
           <button
             class="navbar-toggler"
@@ -53,7 +53,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse cont-enlaces"
+            class="collapse navbar-collapse contenedor-enlaces"
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -82,7 +82,7 @@
     <!-- FIN CABECERA -->
 
     <!-- INICIO CONTENIDO PRINCIPAL -->
-    <main>
+    <main class="principal">
       <!-- INICIO SECCION PRODUCTO -->
       <section>
         <div class="container-fluid py-5">
@@ -90,18 +90,18 @@
             class="d-flex justify-content-evenly align-items-center flex-wrap"
           >
             <div class="col-12 col-md-6">
-              <div class="cont-text mx-auto">
-                <h2 class="mb-xxl-4 text-center">NUESTROS WHISKYS</h2>
-                <p>
+              <div class="contenedor-texto mx-auto">
+                <h2 class="mb-xxl-4 text-center titulos">NUESTROS WHISKYS</h2>
+                <p class="parrafos">
                   Fabricamos el whisky más prestigioso de la región a partir de
                   los ingredientes de mayor calidad seleccionados en nuestras
                   fabricas.
                 </p>
-                <p>
+                <p class="parrafos">
                   Calidad, elegancia y exclusividad es lo que nos destaca sobre
                   el resto y son los pilares fundamentales de nuestra marca.
                 </p>
-                <p>
+                <p class="parrafos">
                   Contamos con un producto novedoso que es fabricado con los más
                   altos estándares para brindar a nuestros clientes la mejor
                   experiencia.
@@ -114,7 +114,7 @@
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <div class="cont-img mx-auto text-center">
+              <div class="contenedor-img mx-auto text-center">
                 <picture>
                   <source
                     media="(max-width: 768px)"
@@ -122,8 +122,8 @@
                   />
                   <img
                     src="./assets/img_producto.jpg"
-                    alt="copa de vino"
-                    class="wow animate__animated animate__fadeInRight w-100"
+                    alt="img_producto"
+                    class="wow animate__animated animate__fadeInRight w-100 sombreadoImg"
                   />
                 </picture>
               </div>
@@ -140,20 +140,20 @@
             class="d-flex flex-row-reverse justify-content-evenly align-items-center flex-wrap"
           >
             <div class="col-12 col-md-6">
-              <div class="cont-text mx-auto">
-                <h2 class="mb-xxl-4 text-center">CALIDAD</h2>
-                <p>
+              <div class="contenedor-texto mx-auto">
+                <h2 class="mb-xxl-4 text-center titulos">CALIDAD</h2>
+                <p class="parrafos">
                   La elaboración del Scotch Whisky es un arte antiguo que ha
                   sido desarrollado y refinado sobre el tiempo desde una
                   industria casera hasta convertirse en un proceso preciso.
                 </p>
-                <p>
+                <p class="parrafos">
                   Muchas cosas afectan el sabor y carácter final de un whisky,
                   desde el tipo de granos y levadura usados en la elaboración,
                   hasta la forma del alambique, la barrica y tiempo de
                   maduración.
                 </p>
-                <p>
+                <p class="parrafos">
                   Por eso garantizamos a traves de nuestros procesos de
                   fabricacion la maxima calidad del producto.
                 </p>
@@ -165,7 +165,7 @@
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <div class="cont-img mx-auto text-center">
+              <div class="contenedor-img mx-auto text-center">
                 <picture>
                   <source
                     media="(max-width: 768px)"
@@ -174,7 +174,7 @@
                   <img
                     src="assets/img_calidad.jpg"
                     alt="calidad"
-                    class="wow animate__animated animate__fadeInLeft w-100"
+                    class="wow animate__animated animate__fadeInLeft w-100 sombreadoImg"
                   />
                 </picture>
               </div>
@@ -191,14 +191,14 @@
             class="d-flex justify-content-evenly align-items-center flex-wrap"
           >
             <div class="col-12 col-md-6">
-              <div class="cont-text mx-auto">
-                <h2 class="mb-xxl-4 text-center">HISTORIA</h2>
-                <p>
+              <div class="contenedor-texto mx-auto">
+                <h2 class="mb-xxl-4 text-center titulos">HISTORIA</h2>
+                <p class="parrafos">
                   Con más de 200 años perfeccionando el mejor whisky,
                   nos enfoncamos desde el primer momento en satisfacer
                   las necesisades de nuestros exigentes clientes.
                 </p>
-                <p>
+                <p class="parrafos">
                   Trasmitiendose a traves de 3 generaciones, nuestra
                   familia es experta en la elaboracion y venta de este 
                   complejo producto.
@@ -211,7 +211,7 @@
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <div class="cont-img mx-auto text-center">
+              <div class="contenedor-img mx-auto text-center">
                 <picture>
                   <source
                     media="(max-width: 768px)"
@@ -220,7 +220,7 @@
                   <img
                     src="assets/img_historia.jpg"
                     alt="historia"
-                    class="wow animate__animated animate__fadeInRight w-100"
+                    class="wow animate__animated animate__fadeInRight w-100 sombreadoImg"
                   />
                 </picture>
               </div>
@@ -236,8 +236,8 @@
   <div class="container-fluid" id="pie">
     <footer class="pt-lg-5 pt-4" >
       <div class="row">
-        <div class="col-6 cont-enlaces">
-          <h2>Secciones</h2>
+        <div class="col-6 contenedor-enlaces">
+          <h2 class="titulos">Secciones</h2>
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Inicio</a></li>
             <li class="nav-item mb-2"><a href="./pages/productos.html" class="nav-link p-0 text-muted">Productos</a></li>
@@ -250,7 +250,7 @@
         <div class="col-4 offset-1">
           <form>
             <h2>Suscribite a nuestro Newsletter</h2>
-            <p>Recibiras todas las novedades sobre nuestros productos.</p>
+            <p class="parrafos">Recibiras todas las novedades sobre nuestros productos.</p>
             <div class="d-flex w-100 gap-2">
               <label for="newsletter1" class="visually-hidden">Email address</label>
               <input id="newsletter1" type="text" class="form-control" placeholder="E-MAIL">
@@ -261,7 +261,7 @@
       </div>
   
       <div class="d-flex justify-content-between py-4 border-top fs-5">
-        <p>&copy; Beber con moderacion, prohibida su venta a menores de 18 años. Desarrollado por Aguirre Matias.</p> 
+        <p class="parrafos">&copy; Beber con moderacion, prohibida su venta a menores de 18 años. Desarrollado por Aguirre Matias.</p> 
         <ul class="list-unstyled d-flex">
           <li class="ms-3"><a class="link-dark" href="#"><img src="./assets/instagram.png" width="24px" height="24px" alt="logo_instagram"></a></li>
           <li class="ms-3"><a class="link-dark" href="#"><img src="./assets/twitter.png" width="24px" height="24px" alt="logo_twitter"></a></li>

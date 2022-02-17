@@ -12,21 +12,6 @@ IMPORTACIONES FUENTES
 /*****************************************************************************************************************
 ESTILOS GENERALES
 ******************************************************************************************************************/
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 html {
   scroll-behavior: smooth; }
   html body {
@@ -36,47 +21,48 @@ html {
 /*****************************************************************************************************************
 CABECERA PAGINA PRINCIPAL
 ******************************************************************************************************************/
-#cabecera {
+.cabecera {
   background: url(../assets/Whisky_fondo.jpg) no-repeat center;
   background-size: cover;
   min-height: 100vh;
   width: 100vw; }
-  #cabecera #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent; }
-    #cabecera #menu img {
-      border-radius: 50%;
-      border: 5px double #baab8f; }
-    #cabecera #menu .navbar-toggler {
-      background-color: #baab8f; }
-    #cabecera #menu p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: #baab8f !important; }
-    #cabecera #menu .cont-enlaces a {
-      position: relative;
-      color: #baab8f !important;
-      font-family: "El Messiri", sans-serif;
-      letter-spacing: 0.065rem;
-      font-size: x-large;
-      font-weight: bold; }
-      #cabecera #menu .cont-enlaces a::after {
-        content: " ";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #533535;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 600ms ease-out; }
-      #cabecera #menu .cont-enlaces a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
+
+.menu, .menu-secundario {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: transparent; }
+  .menu .logo, .menu-secundario .logo {
+    border-radius: 50%;
+    border: 5px double #baab8f; }
+  .menu .navbar-toggler, .menu-secundario .navbar-toggler {
+    background-color: #baab8f; }
+  .menu .marca, .menu-secundario .marca {
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    color: #baab8f !important; }
+  .menu .contenedor-enlaces a, .menu-secundario .contenedor-enlaces a {
+    position: relative;
+    color: #baab8f !important;
+    font-family: "El Messiri", sans-serif;
+    letter-spacing: 0.065rem;
+    font-size: x-large;
+    font-weight: bold; }
+    .menu .contenedor-enlaces a::after, .menu-secundario .contenedor-enlaces a::after {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #533535;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 600ms ease-out; }
+    .menu .contenedor-enlaces a:hover::after, .menu-secundario .contenedor-enlaces a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left; }
 
 #navbarSupportedContent {
   z-index: 2; }
@@ -84,45 +70,68 @@ CABECERA PAGINA PRINCIPAL
 /*****************************************************************************************************************
 CABECERA PAGINAS SECUNDARIAS
 ******************************************************************************************************************/
-#cabecera-secundaria {
+.cabecera-secundaria {
   width: 100vw;
   height: 95px; }
-  #cabecera-secundaria #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent; }
-    #cabecera-secundaria #menu img {
-      border-radius: 50%;
-      border: 5px double #baab8f; }
-    #cabecera-secundaria #menu .navbar-toggler {
-      background-color: #baab8f; }
-    #cabecera-secundaria #menu p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: #baab8f !important; }
-    #cabecera-secundaria #menu .cont-enlaces a {
-      position: relative;
-      color: #baab8f !important;
-      font-family: "El Messiri", sans-serif;
-      letter-spacing: 0.065rem;
-      font-size: x-large;
-      font-weight: bold; }
-      #cabecera-secundaria #menu .cont-enlaces a::after {
-        content: " ";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #533535;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 600ms ease-out; }
-      #cabecera-secundaria #menu .cont-enlaces a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
+
+/*****************************************************************************************************************
+ESTILO CONTENIDO PPAL
+******************************************************************************************************************/
+.principal .titulos, .principal .tipos-whiskys h2, .tipos-whiskys .principal h2 {
+  font-family: "El Messiri", sans-serif;
+  color: white; }
+
+.principal .parrafos {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  color: white; }
+
+/*****************************************************************************************************************
+ESTILO BOTONES/IMG/TITULOS ETC GENERALES
+******************************************************************************************************************/
+.sombreadoImg {
+  border-radius: 40px;
+  box-shadow: 0px 0px 45px 5px #baab8f; }
+
+.miBoton {
+  width: 140px;
+  height: 45px;
+  font-size: 23px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #baab8f;
+  font-family: "El Messiri", sans-serif;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 1; }
+  .miBoton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #baab8f;
+    z-index: -1;
+    transition: all 0.5s; }
+  .miBoton:hover::before {
+    width: 100%; }
+  .miBoton:hover {
+    color: black; }
+  .miBoton:active:before {
+    background: #baab8f; }
+
+.tituloDorado, .carousel .carousel-item .carousel-caption h1, .titulo-proceso, .linea-tiempo h3 {
+  color: black;
+  background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder; }
 
 /*****************************************************************************************************************
 PIE PAGINA PRINCIPAL Y SECUNDARIAS
@@ -134,144 +143,67 @@ PIE PAGINA PRINCIPAL Y SECUNDARIAS
   #pie h2,
   #pie p {
     color: #baab8f; }
-  #pie .cont-enlaces a {
+  #pie a {
     position: relative;
-    color: white !important;
+    color: white;
     font-size: x-large; }
+
+/*****************************************************************************************************************
+ESTILOS MOBILE
+******************************************************************************************************************/
+@media (max-width: 480px) {
+  .cabecera,
+  .cabecera-secundaria {
+    background-position: 45%; }
+    .cabecera .menu, .cabecera .menu-secundario,
+    .cabecera-secundaria .menu,
+    .cabecera-secundaria .menu-secundario {
+      background: #000000;
+      background: -webkit-linear-gradient(to bottom, #434343, #000000);
+      background: linear-gradient(to bottom, #434343, #000000);
+      opacity: 80%; }
+      .cabecera .menu .marca, .cabecera .menu-secundario .marca,
+      .cabecera-secundaria .menu .marca,
+      .cabecera-secundaria .menu-secundario .marca {
+        margin-left: 75px; } }
+
+/*****************************************************************************************************************
+ESTILOS TABLET
+******************************************************************************************************************/
+@media (min-width: 481px) and (max-width: 1023px) {
+  .cabecera,
+  .cabecera-secundaria {
+    background-position: 40%; }
+    .cabecera .menu, .cabecera .menu-secundario,
+    .cabecera-secundaria .menu,
+    .cabecera-secundaria .menu-secundario {
+      background: #000000;
+      background: -webkit-linear-gradient(to bottom, #434343, #000000);
+      background: linear-gradient(to bottom, #434343, #000000);
+      opacity: 80%; } }
+
+/*****************************************************************************************************************
+ESTILOS DESKTOP
+******************************************************************************************************************/
+@media (min-width: 1024px) and (max-width: 1499px) {
+  #navbarSupportedContent {
+    margin-left: 35%; } }
+
+@media (min-width: 1500px) {
+  #cabecera #menu .contenedor-enlaces a {
+    font-size: 22px; }
+  #navbarSupportedContent {
+    margin-left: 45%; } }
 
 /*****************************************************************************************************************
 ESTILOS PAGINA PRODUCTOS
 ******************************************************************************************************************/
-/*****************************************************************************************************************
-IMPORTACIONES ESTILOS OTRAS PAGINAS
-******************************************************************************************************************/
-/*****************************************************************************************************************
-IMPORTACIONES FUENTES
-******************************************************************************************************************/
-/*****************************************************************************************************************
-ESTILOS GENERALES
-******************************************************************************************************************/
-html {
-  scroll-behavior: smooth; }
-  html body {
-    overflow-x: hidden;
-    background-color: black; }
-
-/*****************************************************************************************************************
-CABECERA PAGINA PRINCIPAL
-******************************************************************************************************************/
-#cabecera {
-  background: url(../assets/Whisky_fondo.jpg) no-repeat center;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100vw; }
-  #cabecera #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent; }
-    #cabecera #menu img {
-      border-radius: 50%;
-      border: 5px double #baab8f; }
-    #cabecera #menu .navbar-toggler {
-      background-color: #baab8f; }
-    #cabecera #menu p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: #baab8f !important; }
-    #cabecera #menu .cont-enlaces a {
-      position: relative;
-      color: #baab8f !important;
-      font-family: "El Messiri", sans-serif;
-      letter-spacing: 0.065rem;
-      font-size: x-large;
-      font-weight: bold; }
-      #cabecera #menu .cont-enlaces a::after {
-        content: " ";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #533535;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 600ms ease-out; }
-      #cabecera #menu .cont-enlaces a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
-
-#navbarSupportedContent {
-  z-index: 2; }
-
-/*****************************************************************************************************************
-CABECERA PAGINAS SECUNDARIAS
-******************************************************************************************************************/
-#cabecera-secundaria {
-  width: 100vw;
-  height: 95px; }
-  #cabecera-secundaria #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent; }
-    #cabecera-secundaria #menu img {
-      border-radius: 50%;
-      border: 5px double #baab8f; }
-    #cabecera-secundaria #menu .navbar-toggler {
-      background-color: #baab8f; }
-    #cabecera-secundaria #menu p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: #baab8f !important; }
-    #cabecera-secundaria #menu .cont-enlaces a {
-      position: relative;
-      color: #baab8f !important;
-      font-family: "El Messiri", sans-serif;
-      letter-spacing: 0.065rem;
-      font-size: x-large;
-      font-weight: bold; }
-      #cabecera-secundaria #menu .cont-enlaces a::after {
-        content: " ";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #533535;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 600ms ease-out; }
-      #cabecera-secundaria #menu .cont-enlaces a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
-
-/*****************************************************************************************************************
-PIE PAGINA PRINCIPAL Y SECUNDARIAS
-******************************************************************************************************************/
-#pie {
-  background-color: #0d0d0d;
-  height: auto;
-  border-radius: 1%; }
-  #pie h2,
-  #pie p {
-    color: #baab8f; }
-  #pie .cont-enlaces a {
-    position: relative;
-    color: white !important;
-    font-size: x-large; }
-
 /*****************************************************************************************************************
 ESTILOS CARROUSEL
 ******************************************************************************************************************/
 .carousel {
   margin-bottom: 4rem;
   width: 100vw; }
-  .carousel .carousel-caption {
-    bottom: 3rem;
-    z-index: 1; }
   .carousel .carousel-item {
     height: calc(100vh - 95px); }
     .carousel .carousel-item picture > img {
@@ -280,17 +212,11 @@ ESTILOS CARROUSEL
       left: 0;
       min-width: 100%;
       min-height: 100%; }
-    .carousel .carousel-item h1 {
-      color: black;
-      /*if no support for background-clip*/
-      background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
-      background: -o-linear-gradient(transparent, transparent);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: bolder;
-      font-size: 4rem; }
-      .carousel .carousel-item h1 p {
-        font-size: 2rem; }
+    .carousel .carousel-item .carousel-caption {
+      bottom: 3rem;
+      z-index: 1; }
+      .carousel .carousel-item .carousel-caption h1 {
+        font-size: 4rem; }
 
 /*****************************************************************************************************************
 ESTILOS TIPOS WHISKY
@@ -300,10 +226,10 @@ ESTILOS TIPOS WHISKY
   text-align: center; }
 
 .tipos-whiskys h2 {
-  font-weight: 400;
-  color: white; }
+  font-weight: 400; }
 
 .tipos-whiskys p {
+  font-family: "Nunito Sans", sans-serif;
   color: white; }
 
 .tipos-whiskys .col-lg-4 p {
@@ -325,7 +251,7 @@ ESTILOS DESCRIPCION WHISKY
 ESTILOS MOBILE
 ******************************************************************************************************************/
 @media (max-width: 480px) {
-  .carousel-caption p {
+  .carousel-caption .parrafos {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
     line-height: 1.4; }
@@ -355,130 +281,9 @@ ESTILOS TABLET
 ESTILOS PAGINA PROCESO
 ******************************************************************************************************************/
 /*****************************************************************************************************************
-IMPORTACIONES ESTILOS OTRAS PAGINAS
-******************************************************************************************************************/
-/*****************************************************************************************************************
-IMPORTACIONES FUENTES
-******************************************************************************************************************/
-/*****************************************************************************************************************
-ESTILOS GENERALES
-******************************************************************************************************************/
-html {
-  scroll-behavior: smooth; }
-  html body {
-    overflow-x: hidden;
-    background-color: black; }
-
-/*****************************************************************************************************************
-CABECERA PAGINA PRINCIPAL
-******************************************************************************************************************/
-#cabecera {
-  background: url(../assets/Whisky_fondo.jpg) no-repeat center;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100vw; }
-  #cabecera #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent; }
-    #cabecera #menu img {
-      border-radius: 50%;
-      border: 5px double #baab8f; }
-    #cabecera #menu .navbar-toggler {
-      background-color: #baab8f; }
-    #cabecera #menu p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: #baab8f !important; }
-    #cabecera #menu .cont-enlaces a {
-      position: relative;
-      color: #baab8f !important;
-      font-family: "El Messiri", sans-serif;
-      letter-spacing: 0.065rem;
-      font-size: x-large;
-      font-weight: bold; }
-      #cabecera #menu .cont-enlaces a::after {
-        content: " ";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #533535;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 600ms ease-out; }
-      #cabecera #menu .cont-enlaces a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
-
-#navbarSupportedContent {
-  z-index: 2; }
-
-/*****************************************************************************************************************
-CABECERA PAGINAS SECUNDARIAS
-******************************************************************************************************************/
-#cabecera-secundaria {
-  width: 100vw;
-  height: 95px; }
-  #cabecera-secundaria #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent; }
-    #cabecera-secundaria #menu img {
-      border-radius: 50%;
-      border: 5px double #baab8f; }
-    #cabecera-secundaria #menu .navbar-toggler {
-      background-color: #baab8f; }
-    #cabecera-secundaria #menu p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: #baab8f !important; }
-    #cabecera-secundaria #menu .cont-enlaces a {
-      position: relative;
-      color: #baab8f !important;
-      font-family: "El Messiri", sans-serif;
-      letter-spacing: 0.065rem;
-      font-size: x-large;
-      font-weight: bold; }
-      #cabecera-secundaria #menu .cont-enlaces a::after {
-        content: " ";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #533535;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 600ms ease-out; }
-      #cabecera-secundaria #menu .cont-enlaces a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
-
-/*****************************************************************************************************************
-PIE PAGINA PRINCIPAL Y SECUNDARIAS
-******************************************************************************************************************/
-#pie {
-  background-color: #0d0d0d;
-  height: auto;
-  border-radius: 1%; }
-  #pie h2,
-  #pie p {
-    color: #baab8f; }
-  #pie .cont-enlaces a {
-    position: relative;
-    color: white !important;
-    font-size: x-large; }
-
-/*****************************************************************************************************************
 ESTILOS 
 ******************************************************************************************************************/
-.featurette-divider-proceso {
+.divisor {
   background: #F7F8F8;
   background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8);
   background: linear-gradient(to right, #ACBB78, #F7F8F8);
@@ -486,143 +291,19 @@ ESTILOS
   margin: 0px 5% 0px 5%;
   border-radius: 300px/10px; }
 
-.featurette-heading-proceso {
-  color: black;
-  /*if no support for background-clip*/
-  background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
-  background: -o-linear-gradient(transparent, transparent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bolder;
+.titulo-proceso {
+  font-weight: 400 !important;
   font-size: 3rem; }
 
 /*****************************************************************************************************************
 ESTILOS PAGINA PROCESO
 ******************************************************************************************************************/
 /*****************************************************************************************************************
-IMPORTACIONES ESTILOS OTRAS PAGINAS
-******************************************************************************************************************/
-/*****************************************************************************************************************
-IMPORTACIONES FUENTES
-******************************************************************************************************************/
-/*****************************************************************************************************************
-ESTILOS GENERALES
-******************************************************************************************************************/
-html {
-  scroll-behavior: smooth; }
-  html body {
-    overflow-x: hidden;
-    background-color: black; }
-
-/*****************************************************************************************************************
-CABECERA PAGINA PRINCIPAL
-******************************************************************************************************************/
-#cabecera {
-  background: url(../assets/Whisky_fondo.jpg) no-repeat center;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100vw; }
-  #cabecera #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent; }
-    #cabecera #menu img {
-      border-radius: 50%;
-      border: 5px double #baab8f; }
-    #cabecera #menu .navbar-toggler {
-      background-color: #baab8f; }
-    #cabecera #menu p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: #baab8f !important; }
-    #cabecera #menu .cont-enlaces a {
-      position: relative;
-      color: #baab8f !important;
-      font-family: "El Messiri", sans-serif;
-      letter-spacing: 0.065rem;
-      font-size: x-large;
-      font-weight: bold; }
-      #cabecera #menu .cont-enlaces a::after {
-        content: " ";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #533535;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 600ms ease-out; }
-      #cabecera #menu .cont-enlaces a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
-
-#navbarSupportedContent {
-  z-index: 2; }
-
-/*****************************************************************************************************************
-CABECERA PAGINAS SECUNDARIAS
-******************************************************************************************************************/
-#cabecera-secundaria {
-  width: 100vw;
-  height: 95px; }
-  #cabecera-secundaria #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent; }
-    #cabecera-secundaria #menu img {
-      border-radius: 50%;
-      border: 5px double #baab8f; }
-    #cabecera-secundaria #menu .navbar-toggler {
-      background-color: #baab8f; }
-    #cabecera-secundaria #menu p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: #baab8f !important; }
-    #cabecera-secundaria #menu .cont-enlaces a {
-      position: relative;
-      color: #baab8f !important;
-      font-family: "El Messiri", sans-serif;
-      letter-spacing: 0.065rem;
-      font-size: x-large;
-      font-weight: bold; }
-      #cabecera-secundaria #menu .cont-enlaces a::after {
-        content: " ";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #533535;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 600ms ease-out; }
-      #cabecera-secundaria #menu .cont-enlaces a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
-
-/*****************************************************************************************************************
-PIE PAGINA PRINCIPAL Y SECUNDARIAS
-******************************************************************************************************************/
-#pie {
-  background-color: #0d0d0d;
-  height: auto;
-  border-radius: 1%; }
-  #pie h2,
-  #pie p {
-    color: #baab8f; }
-  #pie .cont-enlaces a {
-    position: relative;
-    color: white !important;
-    font-size: x-large; }
-
-/*****************************************************************************************************************
 ESTILOS 
 ******************************************************************************************************************/
+.titulo-historia {
+  font-weight: bolder !important; }
+
 .linea-tiempo {
   position: relative;
   width: 70vw;
@@ -630,12 +311,6 @@ ESTILOS
   height: 100%; }
   .linea-tiempo h3 {
     font-family: "Great Vibes", cursive;
-    color: black;
-    /*if no support for background-clip*/
-    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
-    background: -o-linear-gradient(transparent, transparent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-weight: bolder;
     font-size: 3rem !important; }
 
@@ -724,100 +399,28 @@ ESTILOS TABLET
 /*****************************************************************************************************************
 ESTILOS INDEX
 ******************************************************************************************************************/
-main h2 {
-  font-family: "El Messiri", sans-serif; }
-
-main p {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: large;
-  font-weight: bold; }
-
-main .cont-text {
-  color: white;
+.contenedor-texto {
   width: 80%; }
-  @media all and (max-width: 576px) {
-    main .cont-text {
-      width: 90%; } }
 
-main .cont-img {
+.contenedor-img {
   width: 50%; }
-  @media all and (max-width: 768px) {
-    main .cont-img {
-      width: 80%; } }
-  main .cont-img img {
-    border-radius: 40px;
-    box-shadow: 0px 0px 45px 5px #baab8f; }
-
-main .miBoton {
-  width: 140px;
-  height: 45px;
-  font-size: 23px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #baab8f;
-  font-family: "El Messiri", sans-serif;
-  font-weight: 700;
-  position: relative;
-  transition: all 0.5s;
-  z-index: 1; }
-  main .miBoton::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background-color: #baab8f;
-    z-index: -1;
-    transition: all 0.5s; }
-  main .miBoton:hover::before {
-    width: 100%; }
-  main .miBoton:hover {
-    color: black; }
-  main .miBoton:active:before {
-    background: #baab8f; }
 
 /*****************************************************************************************************************
 ESTILOS MOBILE
 ******************************************************************************************************************/
 @media (max-width: 480px) {
-  #cabecera, #cabecera-secundaria {
-    background-position: 45%; }
-    #cabecera #menu, #cabecera-secundaria #menu {
-      background: #000000;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #434343, #000000);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #434343, #000000);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      opacity: 80%; }
-      #cabecera #menu p, #cabecera-secundaria #menu p {
-        margin-left: 75px; } }
+  .contenedor-img {
+    width: 80%; }
+  .contenedor-texto {
+    width: 90%; } }
 
 /*****************************************************************************************************************
 ESTILOS TABLET
 ******************************************************************************************************************/
 @media (min-width: 481px) and (max-width: 1023px) {
-  #cabecera, #cabecera-secundaria {
-    background-position: 40%; }
-    #cabecera #menu, #cabecera-secundaria #menu {
-      background: #000000;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #434343, #000000);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #434343, #000000);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      opacity: 80%; } }
+  .contenedor-img {
+    width: 80%; } }
 
 /*****************************************************************************************************************
 ESTILOS DESKTOP
 ******************************************************************************************************************/
-@media (min-width: 1024px) and (max-width: 1499px) {
-  #navbarSupportedContent {
-    margin-left: 35%; } }
-
-@media (min-width: 1500px) {
-  #navbarSupportedContent {
-    margin-left: 45%; } }

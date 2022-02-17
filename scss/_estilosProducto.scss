@@ -2,20 +2,11 @@
 ESTILOS PAGINA PRODUCTOS
 ******************************************************************************************************************/
 /*****************************************************************************************************************
-IMPORTACIONES ESTILOS OTRAS PAGINAS
-******************************************************************************************************************/
-@import "_generales";
-
-/*****************************************************************************************************************
 ESTILOS CARROUSEL
 ******************************************************************************************************************/
 .carousel {
   margin-bottom: 4rem;
   width: 100vw;
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 1;
-  }
 
   .carousel-item {
     height: calc(100vh - 95px);
@@ -26,29 +17,12 @@ ESTILOS CARROUSEL
       min-width: 100%;
       min-height: 100%;
     }
-    h1 {
-      color: black; /*if no support for background-clip*/
-      background: -webkit-linear-gradient(transparent, transparent),
-        -webkit-linear-gradient(top, rgba(213, 173, 109, 1) 0%, rgba(
-                213,
-                173,
-                109,
-                1
-              )
-              26%, rgba(226, 186, 120, 1) 35%, rgba(163, 126, 67, 1) 45%, rgba(
-                145,
-                112,
-                59,
-                1
-              )
-              61%, rgba(213, 173, 109, 1) 100%);
-      background: -o-linear-gradient(transparent, transparent);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: bolder;
-      font-size: 4rem;
-      p{
-        font-size: 2rem;
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 1;
+      h1 {
+        @extend .tituloDorado;
+        font-size: 4rem;
       }
     }
   }
@@ -63,12 +37,13 @@ ESTILOS TIPOS WHISKY
   text-align: center;
 }
 .tipos-whiskys h2 {
+  @extend .titulos;
   font-weight: 400;
-  color: white;
 }
 
 .tipos-whiskys p {
-  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  color: map-get($colores, color-fuente);
 }
 
 .tipos-whiskys .col-lg-4 p {
@@ -95,7 +70,7 @@ ESTILOS MOBILE
 ******************************************************************************************************************/
 
 @media (max-width: 480px) {
-  .carousel-caption p {
+  .carousel-caption .parrafos {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
     line-height: 1.4;
@@ -111,23 +86,17 @@ ESTILOS MOBILE
 
   .featurette img {
     max-width: 100vw;
-
   }
 
   .carousel {
-   
-      h1 {
-        font-size: 3rem !important;
-      }
-      p{
-        font-size: 1rem !important;
-      }
+    h1 {
+      font-size: 3rem !important;
     }
-
-    
+    p {
+      font-size: 1rem !important;
+    }
+  }
 }
-  
-
 
 /*****************************************************************************************************************
 ESTILOS TABLET
@@ -144,9 +113,5 @@ ESTILOS TABLET
 
   .featurette img {
     max-width: 100vw;
-
   }
-
- 
-  
 }

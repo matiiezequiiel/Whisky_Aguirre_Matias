@@ -5,7 +5,7 @@ IMPORTACIONES FUENTES
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 
 /*****************************************************************************************************************
 ESTILOS GENERALES
@@ -17,13 +17,7 @@ $colores: (
   color-cabecera: #baab8f,
   color-enlaces: #533535,
   color-fondo: black,
-);
-
-$tamaños-media: (
-  t-sm: 576px,
-  t-md: 768px,
-  t-lg: 992px,
-  t-xl: 1200px,
+  color-fuente: white,
 );
 
 html {
@@ -38,54 +32,55 @@ html {
 CABECERA PAGINA PRINCIPAL
 ******************************************************************************************************************/
 
-#cabecera {
+.cabecera {
   background: url(../assets/Whisky_fondo.jpg) no-repeat center;
   background-size: cover;
   min-height: 100vh;
   width: 100vw;
-  #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent;
-    img {
-      border-radius: 50%;
-      border: 5px double map-get($colores, color-cabecera);
-    }
-    .navbar-toggler {
-      background-color: map-get($colores, color-cabecera);
-    }
-    p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
+}
+
+.menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: transparent;
+  .logo {
+    border-radius: 50%;
+    border: 5px double map-get($colores, color-cabecera);
+  }
+  .navbar-toggler {
+    background-color: map-get($colores, color-cabecera);
+  }
+  .marca {
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    color: map-get($colores, color-cabecera) !important;
+  }
+  .contenedor-enlaces {
+    a {
+      position: relative;
       color: map-get($colores, color-cabecera) !important;
-    }
-    .cont-enlaces {
-      a {
-        position: relative;
-        color: map-get($colores, color-cabecera) !important;
-        font-family: "El Messiri", sans-serif;
-        letter-spacing: 0.065rem;
-        font-size: x-large;
-        font-weight: bold;
+      font-family: "El Messiri", sans-serif;
+      letter-spacing: 0.065rem;
+      font-size: x-large;
+      font-weight: bold;
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: map-get($colores, color-enlaces);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 600ms ease-out;
+      }
+      &:hover {
         &::after {
-          content: " ";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: map-get($colores, color-enlaces);
-          transform: scaleX(0);
-          transform-origin: bottom right;
-          transition: transform 600ms ease-out;
-        }
-        &:hover {
-          &::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
+          transform: scaleX(1);
+          transform-origin: bottom left;
         }
       }
     }
@@ -100,56 +95,100 @@ CABECERA PAGINA PRINCIPAL
 CABECERA PAGINAS SECUNDARIAS
 ******************************************************************************************************************/
 
-#cabecera-secundaria {
+.cabecera-secundaria {
   width: 100vw;
   height: 95px;
-  #menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background-color: transparent;
-    img {
-      border-radius: 50%;
-      border: 5px double map-get($colores, color-cabecera);
-    }
-    .navbar-toggler {
-      background-color: map-get($colores, color-cabecera);
-    }
-    p {
-      font-family: "Great Vibes", cursive;
-      text-align: center;
-      color: map-get($colores, color-cabecera) !important;
-    }
-    .cont-enlaces {
-      a {
-        position: relative;
-        color: map-get($colores, color-cabecera) !important;
-        font-family: "El Messiri", sans-serif;
-        letter-spacing: 0.065rem;
-        font-size: x-large;
-        font-weight: bold;
-        &::after {
-          content: " ";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: map-get($colores, color-enlaces);
-          transform: scaleX(0);
-          transform-origin: bottom right;
-          transition: transform 600ms ease-out;
-        }
-        &:hover {
-          &::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
-        }
-      }
-    }
+}
+
+.menu-secundario {
+  @extend .menu;
+}
+
+/*****************************************************************************************************************
+ESTILO CONTENIDO PPAL
+******************************************************************************************************************/
+
+.principal {
+  .titulos {
+    font-family: "El Messiri", sans-serif;
+    color: map-get($colores, color-fuente);
   }
+  .parrafos {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: map-get($colores, color-fuente);
+  }
+}
+
+/*****************************************************************************************************************
+ESTILO BOTONES/IMG/TITULOS ETC GENERALES
+******************************************************************************************************************/
+
+.sombreadoImg {
+  border-radius: 40px;
+  box-shadow: 0px 0px 45px 5px map-get($colores, color-cabecera);
+}
+
+.miBoton {
+  width: 140px;
+  height: 45px;
+  font-size: 23px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: map-get($colores, color-cabecera);
+  font-family: "El Messiri", sans-serif;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: map-get($colores, color-cabecera);
+    z-index: -1;
+    transition: all 0.5s;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover {
+    color: black;
+  }
+
+  &:active:before {
+    background: map-get($colores, color-cabecera);
+  }
+}
+
+.tituloDorado{
+  color: black; 
+      background: -webkit-linear-gradient(transparent, transparent),
+        -webkit-linear-gradient(top, rgba(213, 173, 109, 1) 0%, rgba(
+                213,
+                173,
+                109,
+                1
+              )
+              26%, rgba(226, 186, 120, 1) 35%, rgba(163, 126, 67, 1) 45%, rgba(
+                145,
+                112,
+                59,
+                1
+              )
+              61%, rgba(213, 173, 109, 1) 100%);
+      background: -o-linear-gradient(transparent, transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bolder;
 }
 
 /*****************************************************************************************************************
@@ -164,13 +203,65 @@ PIE PAGINA PRINCIPAL Y SECUNDARIAS
   h2,
   p {
     color: map-get($colores, color-cabecera);
-    // color: white !important;
   }
-  .cont-enlaces {
-    a {
-      position: relative;
-      color: white !important;
-      font-size: x-large;
+  a {
+    position: relative;
+    color: map-get($colores, color-fuente);
+    font-size: x-large;
+  }
+}
+
+/*****************************************************************************************************************
+ESTILOS MOBILE
+******************************************************************************************************************/
+
+@media (max-width: 480px) {
+  .cabecera,
+  .cabecera-secundaria {
+    background-position: 45%;
+    .menu {
+      background: #000000;
+      background: -webkit-linear-gradient(to bottom, #434343, #000000);
+      background: linear-gradient(to bottom, #434343, #000000);
+      opacity: 80%;
+      .marca {
+        margin-left: 75px;
+      }
     }
+  }
+}
+
+/*****************************************************************************************************************
+ESTILOS TABLET
+******************************************************************************************************************/
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  .cabecera,
+  .cabecera-secundaria {
+    background-position: 40%;
+    .menu {
+      background: #000000;
+      background: -webkit-linear-gradient(to bottom, #434343, #000000);
+      background: linear-gradient(to bottom, #434343, #000000);
+      opacity: 80%;
+    }
+  }
+}
+
+/*****************************************************************************************************************
+ESTILOS DESKTOP
+******************************************************************************************************************/
+@media (min-width: 1024px) and (max-width: 1499px) {
+  #navbarSupportedContent {
+    margin-left: 35%;
+  }
+}
+
+@media (min-width: 1500px) {
+  #cabecera #menu .contenedor-enlaces a {
+    font-size: 22px;
+  }
+  #navbarSupportedContent {
+    margin-left: 45%;
   }
 }

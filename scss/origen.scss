@@ -10,96 +10,26 @@ IMPORTACIONES ESTILOS OTRAS PAGINAS
 ESTILOS INDEX
 ******************************************************************************************************************/
 
-main{
-
-  h2{
-    font-family: "El Messiri", sans-serif;
-  }
-  p{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: large;
-    font-weight: bold;
-  }
-  
-
-  .cont-text{
-    color: white;
-    width: 80%;
-    @media all and (max-width: map-get($tamaños-media, t-sm )) {
-        width: 90%;
-    }
-  }  
-
-  .cont-img{
-    width: 50%;
-    @media all and (max-width: map-get($tamaños-media,t-md )) {
-        width: 80%;
-    }
-    img{
-        border-radius: 40px;
-        box-shadow: 0px 0px 45px 5px map-get($colores, color-cabecera);  
-    }
-  } 
-
-  .miBoton {
-    width: 140px;
-    height: 45px;
-    font-size: 23px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: map-get($colores, color-cabecera);
-    font-family: "El Messiri", sans-serif;
-    font-weight: 700;
-    position: relative;
-    transition: all 0.5s;
-    z-index: 1;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background-color: map-get($colores, color-cabecera);
-      z-index: -1;
-      transition: all 0.5s;
-    }
-    
-    &:hover::before {
-      width: 100%;
-    }
-    
-    &:hover {
-      color: black;
-    }
-    
-    &:active:before {
-      background: map-get($colores, color-cabecera);
-    }
-    
-  }
-  
+.contenedor-texto {
+  width: 80%;
 }
 
+.contenedor-img {
+  width: 50%;
+  
+}
 
 /*****************************************************************************************************************
 ESTILOS MOBILE
 ******************************************************************************************************************/
 
 @media (max-width: 480px) {
-  #cabecera,#cabecera-secundaria{
-    background-position: 45%;
-    #menu {
-      background: #000000;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      opacity: 80%;
-      p {
-        margin-left: 75px;
-      }
-    }
+  .contenedor-img {
+    width: 80%;
+  }
+  
+  .contenedor-texto {
+    width: 90%;
   }
 }
 
@@ -108,14 +38,8 @@ ESTILOS TABLET
 ******************************************************************************************************************/
 
 @media (min-width: 481px) and (max-width: 1023px) {
-  #cabecera,#cabecera-secundaria {
-    background-position: 40%;
-    #menu {
-      background: #000000;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      opacity: 80%;
-    }
+  .contenedor-img {
+    width: 80%;
   }
 }
 
@@ -123,13 +47,8 @@ ESTILOS TABLET
 ESTILOS DESKTOP
 ******************************************************************************************************************/
 @media (min-width: 1024px) and (max-width: 1499px) {
-  #navbarSupportedContent {
-    margin-left: 35%;
-  }
 }
 
-@media (min-width: 1500px)  {
-  #navbarSupportedContent {
-    margin-left: 45%;
-  }
+@media (min-width: 1500px) {
+ 
 }
