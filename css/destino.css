@@ -158,7 +158,6 @@ ESTILOS MOBILE
     .cabecera .menu, .cabecera .menu-secundario,
     .cabecera-secundaria .menu,
     .cabecera-secundaria .menu-secundario {
-      background: #000000;
       background: -webkit-linear-gradient(to bottom, #434343, #000000);
       background: linear-gradient(to bottom, #434343, #000000);
       opacity: 80%; }
@@ -177,7 +176,6 @@ ESTILOS TABLET
     .cabecera .menu, .cabecera .menu-secundario,
     .cabecera-secundaria .menu,
     .cabecera-secundaria .menu-secundario {
-      background: #000000;
       background: -webkit-linear-gradient(to bottom, #434343, #000000);
       background: linear-gradient(to bottom, #434343, #000000);
       opacity: 80%; } }
@@ -187,7 +185,7 @@ ESTILOS DESKTOP
 ******************************************************************************************************************/
 @media (min-width: 1024px) and (max-width: 1499px) {
   #navbarSupportedContent {
-    margin-left: 35%; } }
+    margin-left: 30%; } }
 
 @media (min-width: 1500px) {
   #cabecera #menu .contenedor-enlaces a {
@@ -284,7 +282,6 @@ ESTILOS PAGINA PROCESO
 ESTILOS 
 ******************************************************************************************************************/
 .divisor {
-  background: #F7F8F8;
   background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8);
   background: linear-gradient(to right, #ACBB78, #F7F8F8);
   height: 3px !important;
